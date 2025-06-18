@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{79468E49-5206-48D5-9A97-A447184036F0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Event_Verse_Application</RootNamespace>
+    <AssemblyName>Event-Verse-Application</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.6.0.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>packages\QRCoder.1.6.0\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin Files\AdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Files\AdminDashboard.Designer.cs">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Files\EventApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Files\EventApproval.Designer.cs">
+      <DependentUpon>EventApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Files\ViewComplaint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Files\ViewComplaint.Designer.cs">
+      <DependentUpon>ViewComplaint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendee Files\AttendeeComplaintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendee Files\AttendeeComplaintForm.Designer.cs">
+      <DependentUpon>AttendeeComplaintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendee Files\AttendeeDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendee Files\AttendeeDashboard.Designer.cs">
+      <DependentUpon>AttendeeDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendee Files\AttendeePastEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendee Files\AttendeePastEvents.Designer.cs">
+      <DependentUpon>AttendeePastEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendee Files\AttendeeProfileManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendee Files\AttendeeProfileManagement.Designer.cs">
+      <DependentUpon>AttendeeProfileManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendee Files\AttendeeRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendee Files\AttendeeRegistration.Designer.cs">
+      <DependentUpon>AttendeeRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendee Files\ConfirmTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendee Files\ConfirmTicket.Designer.cs">
+      <DependentUpon>ConfirmTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendee Files\e-ticketDownload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendee Files\e-ticketDownload.Designer.cs">
+      <DependentUpon>e-ticketDownload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendee Files\BookTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendee Files\BookTicket.Designer.cs">
+      <DependentUpon>BookTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendee Files\EventFeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendee Files\EventFeedback.Designer.cs">
+      <DependentUpon>EventFeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendee Files\UpcomingEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendee Files\UpcomingEvents.Designer.cs">
+      <DependentUpon>UpcomingEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organizer Files\AttendeeManagament.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organizer Files\AttendeeManagament.Designer.cs">
+      <DependentUpon>AttendeeManagament.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organizer Files\CreateEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organizer Files\CreateEvent.Designer.cs">
+      <DependentUpon>CreateEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organizer Files\EventFeedbackView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organizer Files\EventFeedbackView.Designer.cs">
+      <DependentUpon>EventFeedbackView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organizer Files\OrganizerComplaintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organizer Files\OrganizerComplaintForm.Designer.cs">
+      <DependentUpon>OrganizerComplaintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organizer Files\OrganizerDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organizer Files\OrganizerDashboard.Designer.cs">
+      <DependentUpon>OrganizerDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organizer Files\OrganizerProfileManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organizer Files\OrganizerProfileManagement.Designer.cs">
+      <DependentUpon>OrganizerProfileManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organizer Files\OrganizerRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organizer Files\OrganizerRegistration.Designer.cs">
+      <DependentUpon>OrganizerRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organizer Files\ResourceAndVendorManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organizer Files\ResourceAndVendorManagement.Designer.cs">
+      <DependentUpon>ResourceAndVendorManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organizer Files\TicketAndSalesManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organizer Files\TicketAndSalesManagement.Designer.cs">
+      <DependentUpon>TicketAndSalesManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organizer Files\UpdateEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organizer Files\UpdateEvent.Designer.cs">
+      <DependentUpon>UpdateEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Files\UserLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Files\UserLogin.Designer.cs">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User Files\UserRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Files\UserRegistration.Designer.cs">
+      <DependentUpon>UserRegistration.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin Files\AdminDashboard.resx">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Files\EventApproval.resx">
+      <DependentUpon>EventApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Files\ViewComplaint.resx">
+      <DependentUpon>ViewComplaint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendee Files\AttendeeComplaintForm.resx">
+      <DependentUpon>AttendeeComplaintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendee Files\AttendeeDashboard.resx">
+      <DependentUpon>AttendeeDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendee Files\AttendeePastEvents.resx">
+      <DependentUpon>AttendeePastEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendee Files\AttendeeProfileManagement.resx">
+      <DependentUpon>AttendeeProfileManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendee Files\AttendeeRegistration.resx">
+      <DependentUpon>AttendeeRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendee Files\ConfirmTicket.resx">
+      <DependentUpon>ConfirmTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendee Files\e-ticketDownload.resx">
+      <DependentUpon>e-ticketDownload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendee Files\EventFeedback.resx">
+      <DependentUpon>EventFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organizer Files\AttendeeManagament.resx">
+      <DependentUpon>AttendeeManagament.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organizer Files\CreateEvent.resx">
+      <DependentUpon>CreateEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organizer Files\EventFeedbackView.resx">
+      <DependentUpon>EventFeedbackView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organizer Files\OrganizerComplaintForm.resx">
+      <DependentUpon>OrganizerComplaintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organizer Files\OrganizerDashboard.resx">
+      <DependentUpon>OrganizerDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organizer Files\OrganizerProfileManagement.resx">
+      <DependentUpon>OrganizerProfileManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organizer Files\OrganizerRegistration.resx">
+      <DependentUpon>OrganizerRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organizer Files\ResourceAndVendorManagement.resx">
+      <DependentUpon>ResourceAndVendorManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organizer Files\TicketAndSalesManagement.resx">
+      <DependentUpon>TicketAndSalesManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organizer Files\UpdateEvent.resx">
+      <DependentUpon>UpdateEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Attendee Files\BookTicket.resx">
+      <DependentUpon>BookTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendee Files\UpcomingEvents.resx">
+      <DependentUpon>UpcomingEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Files\UserLogin.resx">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Files\UserRegistration.resx">
+      <DependentUpon>UserRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
